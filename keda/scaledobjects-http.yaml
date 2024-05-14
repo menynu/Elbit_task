@@ -1,0 +1,18 @@
+kind: HTTPScaledObject
+apiVersion: http.keda.sh/v1alpha1
+metadata:
+    name: nginx-http-scaledobject
+    annotations:
+        httpscaledobject.keda.sh/skip-scaledobject-creation: "false"
+spec:
+    hosts: 
+    - myhost.com
+    targetPendingRequests: 1
+    scaleTargetRef:
+        deployment: nginx
+        service: nginx
+        port: 80
+    replicas:
+        min: 0
+        max: 5
+    scaledownPeriod: 40
