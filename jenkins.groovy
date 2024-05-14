@@ -1,4 +1,4 @@
-def repoUrl = 'https://github.com/menynu/awsome_task.git'
+def repoUrl = 'https://github.com/menynu/Elbit_task.git'
 def flaskImageName = 'meny205/flask-docker-list'
 def nginxImageName = 'meny205/nginx-custom'
 def dockerHubCredentialsId = 'dockerhub-cred'
